@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>All Products - Mai Electricals & Light House</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<img src="C:\yogesh\mai\images\IMG-20230330-WA0000.jpg" width="125x">
+		<div class="nav-links" id="navlinks"></div>	
+		</div>
+		<nav>
+			<ul id="menuItems">
+				<li><a href="/MaiElec/servlets/servlet/RedirectServletEx">Home</a></li>
+				<li><a href="./products.html">Products</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+				<li><a href="./account.html">Account</a></li>
+			</ul>
+		</nav>
+	<!--<img src="images/cart.jpg" width="30px" height="30px">
+    <img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()"--->	
+	</div>
+	</div>
+<!--------------account-page------------->
+<div class="account-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<img src="C:\yogesh\mai\images\IMG-20230330-WA0000.jpg" width="100%">
+			</div>
+
+			<div class="col-2">
+				<div class="form-container">
+					<div class="form-btn">
+						<span onclick="login()">Login</span> 
+						<span onclick="register()">Register</span>
+						<hr id="Indicator">
+					</div>
+
+					<form id="LoginForm" action="/MaiElec/servlet/LoginServlet" method="POST">
+						<input type="text" name = "username" placeholder="Username">
+						<input type="password" name = "password" placeholder="password">
+						<button type="submit" class="btn">Login</button>
+						<a href="">Forgot password</a>
+					</form> 
+					 
+					<form id =  "Search" action = "/MaiElec/servlet/SearchServlet" method = "POST">
+					<input type = "text" name = "search" placeholder = "Search Here">
+					<button type = "Submit" class = "btn" >Search</button>
+					</form>
+
+					<form id="RegForm" action = "/MaiElec/servlet/RegisterServlet" method = "POST">
+						<input type="text" name = "username" placeholder="Username">
+						<input type="email" name = "email" placeholder="Email">
+						<input type="password" name = "password" placeholder="password">
+						<button type="submit" class="btn">Register</button>
+						</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--------------- footer------------>
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download Our App</h3>
+				<p>Download App for Android and ios mobile phone.</p>
+				<div class="app-logo">
+					<img src="images/playstore2.jpg">
+					<img src="images/appstore.jpg">
+				</div>
+			</div>
+			<div class="footer-col-2">
+				<img src="images/logo.jpg">
+				<p>Our purpose Is To Sustainably Make the Pleasur and Benifits of ecommerce website for hardware store to the many</p>
+			</div>
+			<div class="footer-col-3">
+				<h3>Useful links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer-col-4">
+				<h3>Follow us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>YouTube</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+</div>
+<!---------------Js for toggle menu--------------->
+    <script>
+    	var menuItems = document.getElementById("menuItems");
+
+    	MenuItems.style.maxHeight = "0px";
+
+    	function menutoggle(){
+    		if(MenuItems.style.maxHeight == "0px")
+         {
+         	MenuItems.style.maxHeight = "200px";
+         }
+         else 
+         {
+         	MenuItems.style.maxHeight = "0px";
+         }
+    		
+    	}
+
+    </script>
+
+
+<!---------------Js for toggle Form--------------->
+
+<script>
+	
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicator = document.getElementById("Indicator");
+
+   function register(){
+   	   RegForm.style.transform = "translateX(0px)";
+   	   LoginForm.style.transform = "translateX(0px)";
+   	   Indicator.style.transform = "translateX(100px)";
+   }
+
+   function login(){
+   	   RegForm.style.transform = "translateX(300px)";
+   	   LoginForm.style.transform = "translateX(300px)";
+   	   Indicator.style.transform = "translateX(0px)";
+   }
+
+</script>
+
+
+</body>
+</html>

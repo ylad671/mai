@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>All Products - Mai Electric and Light House Palus</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<img src="C:\yogesh\mai\images\IMG-20230330-WA0000.jpg" width="125x">
+		<div class="nav-links" id="navlinks"></div>	
+		</div>
+		<nav>
+			<ul id="menuItems">
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./products.html">Products</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+				<li><a href="./account.html">Account</a></li>
+			</ul>
+		</nav>
+		<img src="images/cart.jpg" width="30px" height="30px">
+		<img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()">
+	</div>
+	</div>
+<!--------------contact-page------------->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form</title>
+        <link rel="stylesheet" href=" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="contact.css">
+ </head>
+    <body>
+        <div class="title" align="center">
+            <h1>Contact Us</h1>
+        </div>
+       <div class="container">
+  
+  <form id="ContactForm" action="/MaiElec/servlet/ContactServlet" method="POST">
+   
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="City">City</label>
+    <select id="City" name="City">
+      <option value="Sangli"></option>
+      <option value="Kolhapur"></option>
+      <option value="Pune"></option>
+      <option value ="Mumbai"></option>
+    </select>
+
+    <label for="State">State</label>
+    <select id="State" name="State">
+      <option value="Maharashtra"></option>
+      <option value="Karnataka"></option>
+      <option value="Andhra Pradesh"></option>
+      <option value="Tamil Nadu"></option>
+      
+    </select>
+
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+    </body>
+</html>
+
+
+
+<!--------------- footer------------>
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download Our App</h3>
+				<p>Download App for Android and ios mobile phone.</p>
+				<div class="app-logo">
+					<img src="images/playstore2.jpg">
+					<img src="images/appstore.jpg">
+				</div>
+			</div>
+			<div class="footer-col-2">
+				<img src="C:\yogesh\mai\images\IMG-20230330-WA0000.jpg">
+				<p>Our purpose Is To Sustainably Make the Pleasur and Benefits of ecommerce website for hardware store to the many</p>
+			</div>
+			<div class="footer-col-3">
+				<h3>Useful links</h3>
+				<ul>
+					<li>Coupons</li>
+					<li>Blog Post</li>
+					<li>Return Policy</li>
+					<li>Join Affiliate</li>
+				</ul>
+			</div>
+			<div class="footer-col-4">
+				<h3>Follow us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+					<li>YouTube</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+</div>
+<!---------------Js for toggle menu--------------->
+    <script>
+    	var menuItems = document.getElementById("menuItems");
+
+    	MenuItems.style.maxHeight = "0px";
+
+    	function menutoggle(){
+    		if(MenuItems.style.maxHeight == "0px")
+         {
+         	MenuItems.style.maxHeight = "200px";
+         }
+         else 
+         {
+         	MenuItems.style.maxHeight = "0px";
+         }
+    		
+    	}
+
+    </script>
